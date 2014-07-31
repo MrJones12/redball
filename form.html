@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+	<html>
+	<head>
+		<script type ="text/javascript">
+ function WriteToFile(query1) 
+ {
+
+    set fso = CreateObject("Scripting.FileSystemObject");  
+    set s = fso.CreateTextFile("C:\test.txt", True);
+    s.writeline(document.query1.firstname.value);
+    s.writeline(document.query1.pwd.value);
+    s.writeline(document.query1.user.value);
+    s.Close();
+ }
+  </script>
+	</head>
+	<body>
+		<form onsubmit="run(writetofile);" name="input" method="get">
+			First name: <input type="text" name="firstname"><br>
+			Password: <input type="password" name="pwd">
+			Username: <input type="text" name="user">
+			<input type="submit" value="Submit">
+		</form>
+		
+<body>
+</html>
